@@ -1,0 +1,80 @@
+@reference "./globals.css";
+
+.page {
+  @apply h-full;
+}
+
+.canvas {
+  @apply h-full min-h-[20rem] rounded-[1.75rem] border bg-white;
+  border-color: var(--border-color);
+}
+
+.placeholder {
+  @apply flex h-full min-h-[20rem] items-start justify-start p-6 sm:p-8;
+}
+
+.kicker {
+  @apply text-sm font-medium uppercase tracking-[0.14em];
+  color: var(--muted-foreground);
+}
+
+.recipe {
+  @apply flex flex-col gap-8 p-6 sm:p-8;
+}
+
+.recipeHeader {
+  @apply flex flex-col gap-4 border-b pb-6 sm:flex-row sm:items-start sm:justify-between;
+  border-color: var(--border-color);
+}
+
+.recipeTitle {
+  @apply text-3xl font-semibold tracking-[-0.03em];
+}
+
+.recipeDescription {
+  @apply mt-3 max-w-2xl text-base leading-7;
+  color: var(--muted-foreground);
+}
+
+.recipeMeta {
+  @apply flex flex-wrap gap-3 text-sm font-medium;
+  color: var(--muted-foreground);
+}
+
+.recipeSection {
+  @apply flex flex-col gap-4;
+}
+
+.sectionTitle {
+  @apply text-lg font-semibold tracking-[-0.02em];
+}
+
+.bulletList {
+  @apply grid grid-cols-4 gap-3;
+}
+
+.listItem {
+  @apply items-start justify-between gap-4 rounded-2xl px-4 py-3 border;
+  border-color: #eee
+}
+
+.ingredientName {
+  @apply font-medium;
+}
+
+.ingredientQuantity {
+  @apply shrink-0 text-sm;
+  color: var(--muted-foreground);
+}
+
+.numberedList {
+  @apply flex list-decimal flex-col gap-3 pl-5;
+}
+
+.stepItem {
+  @apply pl-1 leading-7;
+}
+
+.noteItem {
+  @apply leading-7;
+}

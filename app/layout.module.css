@@ -1,0 +1,32 @@
+@reference "./globals.css";
+
+.shell {
+  @apply flex min-h-screen flex-col;
+  background: var(--page-background);
+  color: var(--foreground);
+}
+
+.header {
+  @apply sticky top-0 z-20 border-b bg-white/90 backdrop-blur-sm;
+  border-color: var(--border-color);
+}
+
+.headerInner {
+  @apply flex min-h-[4.25rem] items-center px-4 sm:px-6 lg:px-8;
+}
+
+.brand {
+  @apply text-[1.75rem] font-semibold tracking-[-0.03em] sm:text-[2rem];
+}
+
+.contentGrid {
+  @apply flex flex-1 flex-col lg:grid lg:grid-cols-[29.4375rem_minmax(0,1fr)];
+}
+
+.mainColumn {
+  @apply min-w-0;
+}
+
+.mainContent {
+  @apply min-h-[calc(100vh-4.25rem)] p-4 sm:p-6 lg:p-8;
+}

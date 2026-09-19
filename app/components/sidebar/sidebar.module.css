@@ -1,0 +1,17 @@
+@reference "../../globals.css";
+
+.sidebar {
+  @apply border-b;
+  border-color: var(--border-color);
+  background: var(--sidebar-background);
+}
+
+.sidebarInner {
+  @apply flex h-full flex-col gap-8 px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8;
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    @apply border-r border-b-0;
+  }
+}

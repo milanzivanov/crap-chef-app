@@ -1,0 +1,23 @@
+@reference "../../globals.css";
+
+.button {
+  @apply cursor-pointer inline-flex min-h-14 items-center justify-center rounded-[0.625rem] border-0 px-6 py-4 text-center text-[1.125rem] font-bold leading-6 tracking-[-0.017em] text-white outline-none transition-transform;
+  background: linear-gradient(172deg, #ec4899 0%, #a855f7 100%);
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.22);
+}
+
+.button:disabled {
+  @apply cursor-not-allowed opacity-70;
+  transform: none;
+}
+
+.fullWidth {
+  @apply w-full;
+}

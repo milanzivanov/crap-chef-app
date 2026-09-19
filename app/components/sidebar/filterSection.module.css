@@ -1,0 +1,46 @@
+@reference "../../globals.css";
+
+.section {
+  @apply flex flex-col gap-6 border-b border-dashed pb-8;
+  border-color: var(--panel-border);
+}
+
+.title {
+  @apply text-[1.125rem] font-medium leading-[1.6875rem] tracking-[-0.024em];
+  color: #364153;
+}
+
+.list {
+  @apply flex flex-col gap-4;
+}
+
+.row {
+  @apply flex items-center justify-between gap-4;
+}
+
+.label {
+  @apply text-sm leading-5 tracking-[-0.01em];
+  color: #364153;
+}
+
+.switch {
+  @apply relative h-6 w-11 shrink-0 rounded-full border-0 p-0 transition-all outline-none;
+  background: #d1d5dc;
+}
+
+.switch:focus-visible {
+  box-shadow: 0 0 0 2px rgba(173, 70, 255, 0.2);
+}
+
+.switchActive {
+  background: linear-gradient(90deg, #f6339a 0%, #ad46ff 100%);
+}
+
+.knob {
+  @apply absolute top-0.5 left-0.5 h-5 w-5 rounded-full transition-transform;
+  background: #ffffff;
+}
+
+.knobActive {
+  transform: translateX(1.25rem);
+}

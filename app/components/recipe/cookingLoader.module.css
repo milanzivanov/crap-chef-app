@@ -1,0 +1,83 @@
+@reference "../../globals.css";
+
+.loader {
+  @apply flex min-h-[20rem] flex-col items-center justify-center gap-6 p-6 text-center sm:p-8;
+}
+
+.scene {
+  @apply relative h-56 w-full max-w-[20rem];
+}
+
+.flameLeft,
+.flameCenter,
+.flameRight {
+  @apply absolute bottom-10 rounded-full;
+  background: linear-gradient(180deg, #fbbf24 0%, #f97316 65%, #ef4444 100%);
+  filter: blur(0.5px);
+  transform-origin: center bottom;
+}
+
+.flameLeft {
+  @apply left-[calc(50%-2.75rem)] h-10 w-6;
+  animation: flameFlicker 0.9s ease-in-out infinite;
+}
+
+.flameCenter {
+  @apply left-1/2 h-14 w-8 -translate-x-1/2;
+  animation: flameFlicker 0.75s ease-in-out infinite;
+}
+
+.flameRight {
+  @apply left-[calc(50%+1.5rem)] h-9 w-5;
+  animation: flameFlicker 1s ease-in-out infinite;
+}
+
+.fireBase {
+  @apply absolute bottom-8 left-1/2 h-4 w-32 -translate-x-1/2 rounded-full;
+  background: rgba(15, 23, 42, 0.08);
+}
+
+.emberLeft,
+.emberCenter,
+.emberRight {
+  @apply absolute bottom-7 h-2.5 w-8 rounded-full;
+  background: rgba(180, 83, 9, 0.28);
+}
+
+.emberLeft {
+  left: calc(50% - 3.2rem);
+}
+
+.emberCenter {
+  @apply left-1/2 -translate-x-1/2;
+}
+
+.emberRight {
+  left: calc(50% + 1.2rem);
+}
+
+.label {
+  @apply text-sm font-medium uppercase tracking-[0.14em];
+  color: var(--muted-foreground);
+}
+
+@keyframes flameFlicker {
+  0%,
+  100% {
+    transform: scaleY(1) translateY(0);
+    opacity: 0.92;
+  }
+
+  50% {
+    transform: scaleY(1.14) translateY(-0.15rem);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flameLeft,
+  .flameCenter,
+  .flameRight {
+    animation: none;
+  }
+}

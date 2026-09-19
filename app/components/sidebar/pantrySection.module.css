@@ -1,0 +1,58 @@
+@reference "../../globals.css";
+
+.section {
+  @apply flex flex-col gap-6 border-b border-dashed pb-8;
+  border-color: var(--panel-border);
+}
+
+.title {
+  @apply text-[1.25rem] font-medium leading-[1.875rem] tracking-[-0.028em];
+  color: #364153;
+}
+
+.form {
+  @apply w-full;
+}
+
+.input {
+  @apply h-[3.125rem] w-full rounded-[0.625rem] border px-4 text-base tracking-[-0.02em] outline-none transition-colors;
+  border-color: #e5e7eb;
+  background: #f9fafb;
+  color: #364153;
+}
+
+.input::placeholder {
+  color: rgba(10, 10, 10, 0.5);
+}
+
+.input:focus {
+  border-color: #cbd5e1;
+}
+
+.chips {
+  @apply flex flex-wrap gap-3;
+}
+
+.chip {
+  @apply inline-flex h-[2.375rem] items-center gap-2 rounded-full border pl-[1.0625rem] pr-3 text-sm;
+  border-color: #e5e7eb;
+  background: #f3f4f6;
+  color: #364153;
+}
+
+.chipLabel {
+  @apply leading-5 tracking-[-0.01em];
+}
+
+.removeButton {
+  @apply flex h-4 w-4 items-center justify-center rounded-full border-0 bg-transparent p-0 text-[#98a2b3] transition-colors outline-none;
+}
+
+.removeButton:hover,
+.removeButton:focus-visible {
+  color: #667085;
+}
+
+.removeIcon {
+  @apply h-4 w-4;
+}
