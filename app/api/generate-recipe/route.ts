@@ -15,7 +15,12 @@ export async function POST(request: Request) {
     messages: [
       {
         role: "user",
-        content: "generate a simple random recipe with steps."
+        content: `
+          Create a recipe from ONLY those ingredients ${items.join(", ")}
+          Applay those constraints to the recipe: ${filters.join(", ") || "no additional constraints"}
+          IMPORTANT: Try to be creative and don't always go for the obvious recipe.
+          IMPORTANT: Before making the recipe, think of about 5 dishes that can be made from the provided ingredients and respond with only one of them at random. Do NOT tell me about the other options.
+        `
       }
     ]
   });
