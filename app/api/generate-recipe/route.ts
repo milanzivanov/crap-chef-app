@@ -46,9 +46,7 @@ export async function POST(request: Request) {
 
   console.log("////////// ", message.parsed_output);
 
-  const block = message.content.find((block) => block.type === "text");
-
   return NextResponse.json({
-    recipe: block?.text ?? ""
+    recipe: message.parsed_output
   });
 }
